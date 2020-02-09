@@ -8,12 +8,11 @@ const SearchScreen = () => {
     const [term, setTerm] = useState(''); //term===searchterm, deafult is empty string
     const [searchApi, results, errorMessage] = useResults();
 
-    const filterResultsByPrice  = (price) => { //yelp api responsedaki fieldın adı price
-       
+    const filterResultsByPrice = (price) => {
         return results.filter( result => {
-            return result.price===price;
+            return result.price === price;
         });
-      
+
     };
 
     return (
@@ -25,11 +24,11 @@ const SearchScreen = () => {
             />
         {errorMessage ? <Text>{errorMessage}</Text> : null }
         <Text>We have found {results.length} results</Text>
-       
+        
+        
         <ResultsList results={filterResultsByPrice('$')} title="Cost Effective"/>
-        <ResultsList resuts={filterResultsByPrice('$$')} title="Bit Pricier"/>
-        <ResultsList results={filterResultsByPrice('$$$')} title="Big Spender"/>
-
+        <ResultsList  results={filterResultsByPrice('$')} title="Bit Pricier"/>
+        <ResultsList results={filterResultsByPrice('$')}  title="Big Spender"/>
 
         </View>
 
