@@ -8,11 +8,12 @@ export default () => {
 
     const searchApi = async searchTerm=> {
     console.log('Hi there');
+    console.log(results);
       try {
         const response = await yelp.get('/search', {
             params: {
-                limit: 50, // bu kullandıgım apinin parami ondan cıkmıor otomatik
-                term: searchTerm, //kullanıcının girdigi kelime mesela pasta
+                limit: 50, 
+                term: searchTerm, 
                 location: 'san jose'
             }
         });
@@ -26,8 +27,6 @@ export default () => {
         searchApi('pasta');
 
     }, []);
-    
-
 
     return [searchApi, results, errorMessage];
 
