@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 5,
         marginHorizontal: 15,
-        flexDirection: 'row' // feather ve text ayni linede gosterilior
+        flexDirection: 'row', // feather ve text ayni linede gosterilior
+        marginBottom: 10
 
     },
     inputStyle: {
