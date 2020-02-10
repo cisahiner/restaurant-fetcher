@@ -25,7 +25,7 @@ const SearchScreen = ({ navigation }) => {
             onTermChange={(newTerm)=> setTerm(newTerm)} 
             onTermSubmit={searchApi}
             />
-        {errorMessage ? <Text>{errorMessage}</Text> : null }
+           {errorMessage ? <Text>{errorMessage}</Text> : null }
         
             <ScrollView>
                 <ResultsList 
